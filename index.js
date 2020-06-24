@@ -148,15 +148,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(array, string) {
-    for(i = 0; i <array.length; i++) {
-        if(array[i] === (string)) {
-            array.every(); 
+function filterByWord(array, flavor) {
+    let newArray = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(flavor)) {
+          newArray.push(array[i]) ;
         }
     }
+return newArray
 }
-filterByWord(originalFlavors, "Chocolate");
-console.log(originalFlavors);
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
